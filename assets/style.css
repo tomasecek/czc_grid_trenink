@@ -1,0 +1,161 @@
+@layer reset, init, design;
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap') layer(reset);
+@import url('normalize.css') layer(reset);
+@import url('setup.css') layer(init);
+@import url('student.css') layer(design);
+
+@layer init {
+    .stars {
+        font-size: 1.5em;
+        letter-spacing: .25em;
+        color: var(--yellow);
+    }
+    
+    .product p {
+        margin: 0;
+        line-height: 1.25;
+    }
+}
+
+@layer design {
+    .product-list {
+        display: flex;
+        flex-wrap: wrap;
+        margin: 1em;
+        padding: 0;
+        background-color: var(--gray);
+        gap: 1px;
+    }
+    .product-list::after {
+        content: "";
+        flex-grow: 9;
+        background-color: var(--white);
+        margin-left: -1px;
+    }
+    .product {
+        background-color: var(--white);
+        flex-basis: 360px;
+        flex-grow: 1;
+    }
+    .product__header {
+        position: relative;
+    }
+    .product__claim-box {
+        position: absolute;
+        top: 0;
+        left: 0;
+        margin-top: .5rem;
+    }
+    .claim {
+        font-weight: 300;
+        margin: 0;
+        margin-bottom: .5em;    
+        padding: .25em .5em;
+        color: var(--white);
+        background-color: var(--gray);
+        border-radius: .25em;
+        overflow: hidden;
+        width: fit-content;
+    }
+    .claim--red {
+        background-color: var(--red);
+    }
+    .claim--blue {
+        background-color: rgba(var(--blue-rgb), .75);
+    }
+    .claim--green {
+        background-color: var(--green);
+    }
+    .product__discount-tag {
+        position: absolute;
+        top: 0;
+        right: 0;
+        margin-top: .5rem;
+        font-size: 1.75em;
+        background-color: var(--blue);
+        color: var(--white);
+        padding: .25rem .5rem;
+        aspect-ratio: 1/1;
+        box-sizing: border-box;
+        border-radius: 50%;
+        overflow: hidden;
+        justify-items: center;
+        align-content: center;
+    }
+    .link {
+        text-decoration: none;
+        color: inherit;
+    }
+    .link:hover {
+        text-decoration: underline;
+    }
+    .link--compare {
+        color: var(--blue);
+        font-size: .9em;
+    }
+    .link--installments {
+        font-size: .9em;
+    }
+    .variants__link {
+        text-decoration: none;
+        color: var(--blue);
+        font-size: 0.9em;
+    }
+    .variants__count {
+        font-size: 1.05em;
+        background-color: var(--blue);
+        color: var(--white);
+        padding: .5rem;
+        aspect-ratio: 1 / 1;
+        border-radius: 50%;
+        overflow: hidden;
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .product__title {
+        font-size: 1.5em;
+        overflow: hidden;
+    }
+    .price {
+        text-wrap: nowrap;
+    }
+    .price--original::after {
+        content: '';
+        display: inline-block;
+        width: 0;
+        height: 1em;
+    }
+    .price--original {
+        text-decoration: line-through;
+    }
+    .price--final {
+        font-size: 1.75em;
+        font-weight: 700;
+    }
+    .price--discount {
+        color: var(--red);
+    }
+    .button--buy {
+        background-color: var(--red);
+        color: var(--white);
+        border-radius: 0.25em;
+    }
+    .button--buy:hover {
+        box-shadow: 0 1px 3px var(--blue);
+    }
+    .availability {
+        font-size: .9em;
+    }
+    .availability--in-stock {
+        color: var(--green);
+    }
+    .availability--on-the-way {
+        color: var(--blue);
+    }
+    .product__description {
+        max-width: 360px;
+        margin: 0 auto;
+    }
+}

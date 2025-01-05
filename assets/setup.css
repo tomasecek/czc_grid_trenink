@@ -1,0 +1,55 @@
+:root {
+    --red: #dc1e2c;
+    --blue-rgb: 32, 99, 141;
+    --blue: rgb(var(--blue-rgb));
+    --yellow: #f0a400;
+    --green: #50a050;
+    --gray: #D9D9D9;
+    --black: #000;
+    --white: #fff;
+}
+
+html {
+    font-family: Roboto, sans-serif;
+    font-size: 87.5%;
+}
+
+@font-face {
+    font-family: 'icomoon';
+    src:  url('fonts/icomoon.ttf?3s0hd9') format('truetype'),
+      url('fonts/icomoon.woff?3s0hd9') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: block;
+  }
+  
+  .stars, .icon::before {
+    font-family: 'icomoon' !important;
+    font-style: normal;
+    font-weight: normal;
+    line-height: 1;
+    letter-spacing: 0;
+    font-feature-settings: "liga";
+    font-variant-ligatures: discretionary-ligatures;
+ 
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+
+    padding-right: .25em;
+    vertical-align: middle;
+  }
+  
+  .icon--star::before {
+    content: "\53";
+  }
+  .icon--shalf::before {
+    content: "\48";
+  }
+  .icon--scale::before {
+    content: "\f24e";
+    font-size: 1.4em;
+  }
+  .icon--cart::before {
+    content: "\e900";
+    font-size: 1.4em;
+  }
